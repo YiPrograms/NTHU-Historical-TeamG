@@ -85,7 +85,7 @@ const Header = ({
             'site-header-inner',
             bottomDivider && 'has-bottom-divider'
           )}>
-          <Logo />
+          <Link to="/" onClick={closeMenu}>回顧竹塹風情漫步之旅</Link>
           {!hideNav &&
             <>
               <button
@@ -112,7 +112,13 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                      <Link to="#0" onClick={closeMenu}>走訪傳統與現代並存的老風城街區</Link>
+                    </li>
+                    <li>
+                      <Link to="#0" onClick={closeMenu}>消暑救星－冰店的歷史</Link>
+                    </li>
+                    <li>
+                      <Link to="#0" onClick={closeMenu}>團隊介紹</Link>
                     </li>
                   </ul>
                   {!hideSignin &&

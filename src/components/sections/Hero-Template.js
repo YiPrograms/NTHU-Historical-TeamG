@@ -6,8 +6,6 @@ import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 
-import streetsimg from '../../assets/images/streets.png';
-
 const propTypes = {
   ...SectionProps.types
 }
@@ -90,7 +88,7 @@ const Hero = ({
             >
               <Image
                 className="has-shadow"
-                src={streetsimg}
+                src={require('./../../assets/images/video-placeholder.jpg')}
                 alt="Hero"
                 width={896}
                 height={504} />
@@ -100,7 +98,7 @@ const Hero = ({
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://www.tgos.tw/MapSites/EmbedMap?themeid=21876&visual=point"
+            video="https://player.vimeo.com/video/174002812"
             videoTag="iframe" />
         </div>
       </div>
