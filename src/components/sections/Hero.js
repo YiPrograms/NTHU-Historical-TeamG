@@ -3,10 +3,8 @@ import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
-import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 
-import streetsimg from '../../assets/images/streets.png';
 
 const propTypes = {
   ...SectionProps.types
@@ -24,6 +22,13 @@ const Hero = ({
   bottomDivider,
   hasBgColor,
   invertColor,
+  bigTitle,
+  description,
+  hasModal,
+  imgComponent,
+  modalComponent,
+  modalUrl,
+  buttonComponents,
   ...props
 }) => {
 
@@ -63,22 +68,23 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              回顧<span className="text-color-primary">竹塹風情</span>漫步之旅
+              {bigTitle}
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                ...
+                {description}
               </p>
-              {/* <div className="reveal-from-bottom" data-reveal-delay="600">
+              <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
+                  {buttonComponents}
+                  {/* <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
                     Get started
                     </Button>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
                     View on Github
-                    </Button>
+                    </Button> */}
                 </ButtonGroup>
-              </div> */}
+              </div>
             </div>
           </div>
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
@@ -88,20 +94,23 @@ const Hero = ({
               aria-controls="video-modal"
               onClick={openModal}
             >
-              <Image
-                className="has-shadow"
-                src={streetsimg}
-                alt="Hero"
-                width={896}
-                height={504} />
+              {imgComponent}
+              
             </a>
           </div>
-          <Modal
+          {hasModal && (modalUrl? <Modal
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://www.tgos.tw/MapSites/EmbedMap?themeid=21876&visual=point"
-            videoTag="iframe" />
+            video={modalUrl}
+            videoTag="iframe" />:
+            <Modal
+            id="video-modal"
+            show={videoModalActive}
+            handleClose={closeModal}
+            children={modalComponent} />)
+          }
+          
         </div>
       </div>
     </section>

@@ -112,13 +112,13 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>走訪傳統與現代並存的老風城街區</Link>
+                      <Link to="/streets" onClick={closeMenu}>走訪傳統與現代並存的老風城街區</Link>
                     </li>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>消暑救星－冰店的歷史</Link>
+                      <Link to="/ice" onClick={closeMenu}>消暑救星－冰店的歷史</Link>
                     </li>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>團隊介紹</Link>
+                      <Link to="/team" onClick={closeMenu}>團隊介紹</Link>
                     </li>
                   </ul>
                 </div>

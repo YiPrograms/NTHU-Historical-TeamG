@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import { Link } from 'react-router-dom';
+
 
 
 import history_street_img from '../../assets/images/history-street.jpg';
@@ -75,7 +77,7 @@ const FeaturesSplit = ({
                   專題
                   </div>
                 <h3 className="mt-0 mb-12">
-                  走訪傳統與現代並存的老風城街區
+                  <Link to="/streets">走訪傳統與現代並存的老風城街區</Link>
                   </h3>
                 <p className="m-0">
                   穿越歷史的新竹
@@ -101,7 +103,7 @@ const FeaturesSplit = ({
                   訪談
                   </div>
                 <h3 className="mt-0 mb-12">
-                  消暑救星－冰店的歷史
+                  <Link to="/ice">消暑救星－冰店的歷史</Link>
                   </h3>
                 <p className="m-0">
                   訪談了新竹有名的「814大同冰店」
@@ -124,7 +126,7 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  團隊介紹
+                  <Link to="/team">團隊介紹</Link>
                   </div>
                 <h3 className="mt-0 mb-12">
                   G組
