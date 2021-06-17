@@ -4,7 +4,7 @@ import Hero from '../components/sections/Hero';
 import Passage from '../components/sections/Passage';
 
 import Image from '../components/elements/Image';
-
+import ImageGallery from 'react-image-gallery';
 
 const Home = () => {
   const { pathname } = useLocation();
@@ -13,10 +13,26 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+
+  const images = [
+    { original: 'https://i.imgur.com/8N17fkK.png' },
+    { original: 'https://i.imgur.com/ox8FiHv.png' },
+    { original: 'https://i.imgur.com/B8cRl4M.png' },
+    { original: 'https://i.imgur.com/jBqjCG8.png' },
+    { original: 'https://i.imgur.com/PSXKPdH.png' },
+    { original: 'https://i.imgur.com/nRvcTpM.png' },
+    { original: 'https://i.imgur.com/4qqMIg4.png' },
+    { original: 'https://i.imgur.com/qcmeVE1.png' },
+    { original: 'https://i.imgur.com/tz9bNr7.png' },
+  ];
+
   return (
     <>
       <Hero className="illustration-section-01"
         bigTitle={"走訪傳統與現代並存的老風城街區"}
+        imgComponent={
+          <ImageGallery items={images} showThumbnails={false} autoPlay={true}/>
+        }
         />
       <Passage title="一、「舊」與「新」" paragraphs={
         ["走進新竹市區，穿梭在各大熱門景點：東門市場、城隍廟、新竹火車站、巨城……往往可以發現新竹是個特別的城市。它不同於台北市的高樓林立，不同於台南市的古色古香，它融合了老建築與新建築的靈魂，可能我們前一秒還在老而不舊的城隍廟參拜，下一秒便又走入一個裝潢新穎精緻的小店參觀，這樣反差鮮明又不矛盾的特色，打造了這個特別的城市，打造了「新」竹。",

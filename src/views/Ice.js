@@ -85,8 +85,7 @@ const Home = () => {
             className="has-shadow"
             src={ice_history_3}/>
           <Image
-            style={{flex: '50%', padding: '5px', maxWidth: '50%'}}
-            className="has-shadow"
+            style={{flex: '50%', padding: '5px', maxWidth: '50%'}}            className="has-shadow"
             src={ice_history_4}/>
         </div>,
           <p style={{flex: '70%', padding: '5px'}}>

@@ -58,7 +58,7 @@ const FeaturesSplit = ({
 
   const sectionHeader = {
     title: '主題',
-    paragraph: '...'
+    paragraph: ''
   };
 
   return (

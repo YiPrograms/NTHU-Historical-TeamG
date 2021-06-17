@@ -9,6 +9,11 @@ import * as serviceWorker from './serviceWorker';
 //import './App.css';
 import './assets/scss/style.scss';
 
+import "react-image-gallery/styles/scss/image-gallery.scss";
+
+import "react-image-gallery/styles/css/image-gallery.css";
+
+
 const history = createBrowserHistory();
 
 ReactDOM.render(
