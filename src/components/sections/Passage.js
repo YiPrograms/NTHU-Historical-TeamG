@@ -20,6 +20,7 @@ const Passage = ({
   invertColor,
   title,
   paragraphs,
+  color,
   ...props
 }) => {
 
@@ -42,17 +43,18 @@ const Passage = ({
     <section
       {...props}
       className={outerClasses}
+      style={{background: color? color[0]: ""}}
     >
       <div className="container-sm">
         <div className={innerClasses}>
           <div className="reveal-from-bottom" data-reveal-delay="50">
-            <h3 className="mt-0 mb-16" >
+            <h3 className="mt-0 mb-16" style={{color: color? color[1]: ""}}>
               {title}
             </h3>
             <div className="container">
               {
                 paragraphs.map((text) =>
-                  <p className="mt-0 mb-32">
+                  <p className="mt-0 mb-32" style={{color: color? color[1]: ""}}>
                     {text}
                   </p>
                 )
