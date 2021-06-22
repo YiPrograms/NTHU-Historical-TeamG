@@ -1,14 +1,18 @@
 import { React, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Hero from '../components/sections/Hero';
+// import Hero from '../components/sections/Hero';
+import ImageHero from '../components/sections/ImageHero'
 import Passage from '../components/sections/Passage';
 import styled from "styled-components";
 // import Chart from "react-google-charts";
 import ReactApexCharts from 'react-apexcharts'
 import Image from '../components/elements/Image';
-import ImageGallery from 'react-image-gallery';
+
+import Fade from 'react-reveal/Fade';
 
 import { Tree, TreeNode } from 'react-organizational-chart';
+
+
 
 const Home = () => {
   const { pathname } = useLocation();
@@ -84,27 +88,38 @@ const Home = () => {
   }
 
   const images = [
-    { original: 'https://i.imgur.com/8N17fkK.png' },
-    { original: 'https://i.imgur.com/ox8FiHv.png' },
-    { original: 'https://i.imgur.com/B8cRl4M.png' },
-    { original: 'https://i.imgur.com/jBqjCG8.png' },
-    { original: 'https://i.imgur.com/PSXKPdH.png' },
-    { original: 'https://i.imgur.com/nRvcTpM.png' },
-    { original: 'https://i.imgur.com/4qqMIg4.png' },
-    { original: 'https://i.imgur.com/qcmeVE1.png' },
-    { original: 'https://i.imgur.com/tz9bNr7.png' },
-  ];
+    'https://i.imgur.com/8N17fkK.png',
+    'https://i.imgur.com/ox8FiHv.png',
+    'https://i.imgur.com/B8cRl4M.png',
+    'https://i.imgur.com/jBqjCG8.png',
+    'https://i.imgur.com/PSXKPdH.png',
+    'https://i.imgur.com/nRvcTpM.png',
+    'https://i.imgur.com/4qqMIg4.png',
+    'https://i.imgur.com/qcmeVE1.png',
+    'https://i.imgur.com/tz9bNr7.png',
+  ].sort(() => Math.random() - 0.5);
 
   return (
     <>
-      <Hero className="illustration-section-01"
-        bigTitle={"走訪傳統與現代並存的老風城街區"}
-        imgComponent={
-          <ImageGallery items={images} showThumbnails={false} autoPlay={true}/>
-        }
-        />
+      <ImageHero
+        info="TRIP-LIFE 旅攝生活．熊本一家，https://www.leeleelin.com/2010/04/blog-post_2608.html     JUST A BALCONY，http://justabalcony.blogspot.com/2019/04/just-old_15.html,http://justabalcony.blogspot.com/2019/04/just-old_17.html"
+        images={images}
+        centerComponent={<Fade left><h1>走訪傳統與現代並存的老風城街區</h1></Fade>}
+      />
       <Passage title="一、「舊」與「新」" color={['#B0F2B4', 'black']} paragraphs={
-        ["走進新竹市區，穿梭在各大熱門景點：東門市場、城隍廟、新竹火車站、巨城……往往可以發現新竹是個特別的城市。它不同於台北市的高樓林立，不同於台南市的古色古香，它融合了老建築與新建築的靈魂，可能我們前一秒還在老而不舊的城隍廟參拜，下一秒便又走入一個裝潢新穎精緻的小店參觀，這樣反差鮮明又不矛盾的特色，打造了這個特別的城市，打造了「新」竹。",
+        [<div style={{display: 'flex'}}>
+          <Image
+            style={{flex: '50%', marign: '5px', maxWidth: '50%', alignSelf: 'center', marginRight: 10}}
+            className="has-shadow"
+            src="https://i.imgur.com/s9LcmG4.png"
+            info="臺灣舊照片資料庫，https://dl.lib.ntu.edu.tw/s/photo/item/95198#?c=&m=&s=&cv=&xywh=-36%2C112%2C1290%2C685" />
+          <Image
+            style={{flex: '50%', marign: '5px', maxWidth: '50%', alignSelf: 'center'}}
+            className="has-shadow"
+            src="https://i.imgur.com/qQScYJm.jpg"
+            info="維基百科，https://zh.wikipedia.org/wiki/%E6%96%B0%E7%AB%B9%E5%B8%82%E6%94%BF%E5%BA%9C" />
+         </div>,
+         "走進新竹市區，穿梭在各大熱門景點：東門市場、城隍廟、新竹火車站、巨城……往往可以發現新竹是個特別的城市。它不同於台北市的高樓林立，不同於台南市的古色古香，它融合了老建築與新建築的靈魂，可能我們前一秒還在老而不舊的城隍廟參拜，下一秒便又走入一個裝潢新穎精緻的小店參觀，這樣反差鮮明又不矛盾的特色，打造了這個特別的城市，打造了「新」竹。",
          "而當我們實際走訪大同路與中央路的街區時最先注意到的是樓層非常的參差不齊，一眼望過去非常的雜亂，再來是發現每間店面或是住家的騎樓地差異也都很大，有些看得出是老房子了都沒有變過，但也有些格局雖然是舊的，但是裝潢的很新，可以發現是有認真翻新過的。走到大同路後段的時候也有發現一整排看起來就很有年代，完全沒翻新過，連以前招牌都還看的到的兩層式建築跟看起來很華麗的大樓並列，如此強烈反差的組合。",
          "上網搜尋資料也發現新竹市政府近年來積極推動「老屋翻新計畫」，凡是只要屋齡60年以上的老屋，都有機會申請",
             <Image

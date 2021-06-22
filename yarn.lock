@@ -5855,6 +5855,14 @@ he@^1.2.0:
   resolved "https://registry.npmjs.org/he/-/he-1.2.0.tgz"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
+hero-slider@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/hero-slider/-/hero-slider-2.0.3.tgz#e59e8c5bbb6e37bba82d2423b7617922b59cc106"
+  integrity sha512-Oqe2LayVGIlk7ts+e8neVbJcZGrhhEMx4IJQyz5H6znVfbtZBbsEBbYi9R04dsj0fmK/i/YTfDWBS2DF/pjp4w==
+  dependencies:
+    react-intersection-observer "^8.24.1"
+    react-lazyload "^2.6.2"
+
 hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/hex-color-regex/-/hex-color-regex-1.1.0.tgz"
@@ -9806,6 +9814,11 @@ react-image-gallery@^1.1.1:
     react-swipeable "6.0.1"
     resize-observer-polyfill "^1.5.0"
 
+react-intersection-observer@^8.24.1:
+  version "8.32.0"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.32.0.tgz#47249332e12e8bb99ed35a10bb7dd10446445a7b"
+  integrity sha512-RlC6FvS3MFShxTn4FHAy904bVjX5Nn4/eTjUkurW0fHK+M/fyQdXuyCy9+L7yjA+YMGogzzSJNc7M4UtfSKvtw==
+
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -9815,6 +9828,11 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+react-lazyload@^2.6.2:
+  version "2.6.9"
+  resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-2.6.9.tgz#5a88c885bb98a3b6580759d51039867d1c97d198"
+  integrity sha512-vB7WLp+ZlTEy6LEFFiMtCys7ShX4P64t/eUOAXt58qret6HCbwMY5f/cD0EPCXx1z/UZC3wb9kxPf2DVIQkc4Q==
 
 react-load-script@^0.0.6:
   version "0.0.6"
