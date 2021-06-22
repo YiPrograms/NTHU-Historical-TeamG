@@ -29,8 +29,8 @@ const Home = () => {
       width: 450,
       type: 'pie',
     },
-    labels: ['是', '否', '未知'],
-    colors: ['rgb(0, 143, 251)', 'rgb(255, 69, 96)', 'rgb(206, 212, 220)'],
+    labels: ['是', '否'],
+    colors: ['rgb(0, 143, 251)', 'rgb(255, 69, 96)'],
     responsive: [{
       breakpoint: 480,
       options: {
@@ -200,214 +200,139 @@ const Home = () => {
           </div>,
           "根據資料與實際走訪比較，發現雖然大同路北區這段路比較長，老房子乍看之下也比其他條多，本來認為可能翻新比例不高，但仍有近八成的房子是有經過翻修的，而這八成全部都是為了開店而翻修。而沒有翻修過的房子，主要集中在大同路與中央路的交會點，顯示可能離中心點越遠的地方，越是相對新穎。",
 
-
           <h4 style={{marginTop: '80px'}}>（二）大同路南區</h4>,
           <Image
             className="has-shadow"
-            src="https://i.imgur.com/4NkHcnF.png"
+            src="https://i.imgur.com/OO3kHSg.png"
             info="QGIS製圖，紫色為翻新，紅色為未翻新" />,
           <Tree
             lineWidth={'2px'}
             lineColor={'green'}
             lineBorderRadius={'10px'}
-            label={<StyledNode>總取樣數：19</StyledNode>}
+            label={<StyledNode>總取樣數：32</StyledNode>}
           >
-            <TreeNode label={<StyledNode>翻新數量：15</StyledNode>}>
-              <TreeNode label={<StyledNode>翻新開店：15</StyledNode>} />
+            <TreeNode label={<StyledNode>翻新數量：20</StyledNode>}>
+              <TreeNode label={<StyledNode>翻新開店：20</StyledNode>} />
               <TreeNode label={<StyledNode>翻新住家：0</StyledNode>} />
             </TreeNode>
-            <TreeNode label={<StyledNode>未翻新數量：4</StyledNode>}>
+            <TreeNode label={<StyledNode>未翻新數量：12</StyledNode>}>
             </TreeNode>
           </Tree>,
           <div style={{display: 'flex'}}>
             <ReactApexCharts
               style={{flex: '50%', marign: '5px', maxWidth: '50%', marginRight: 10}}
               options={isRenewChartOptions}
-              series={[15, 4]} type="pie" width={450}
+              series={[20, 12]} type="pie" width={450}
             />
             <ReactApexCharts
               style={{flex: '50%', marign: '5px', maxWidth: '50%'}}
               options={renewReasonChartOptions}
-              series={[15, 0]} type="pie" width={450}
+              series={[20, 0]} type="pie" width={450}
             />
           </div>,
+          "根據資料顯示，大同路南區的未翻新比例最高，在總計三十四間的調查終有近三分之一的房屋為未翻新的，推測可能與鄰近東門市場有關。當初這一帶是從東門市場開始繁榮興盛，所以大同路南區較早發展，而附近店家一直以來擁有較好的商業地理位置，即使外觀不更新也仍有許多客人，於是有較多當初建造的樣貌保持至今。而翻新的房屋也可以發現是百分百為了開店而建造的。",
           
-
-          <h4 style={{marginTop: '80px'}}>（一）大同路北區</h4>,
+          
+          <h4 style={{marginTop: '80px'}}>（三）中央路西區</h4>,
           <Image
             className="has-shadow"
-            src="https://i.imgur.com/4NkHcnF.png"
+            src="https://i.imgur.com/6y7FBfM.png"
             info="QGIS製圖，紫色為翻新，紅色為未翻新" />,
           <Tree
             lineWidth={'2px'}
             lineColor={'green'}
             lineBorderRadius={'10px'}
-            label={<StyledNode>總取樣數：19</StyledNode>}
+            label={<StyledNode>總取樣數：24</StyledNode>}
           >
-            <TreeNode label={<StyledNode>翻新數量：15</StyledNode>}>
-              <TreeNode label={<StyledNode>翻新開店：15</StyledNode>} />
+            <TreeNode label={<StyledNode>翻新數量：24</StyledNode>}>
+              <TreeNode label={<StyledNode>翻新開店：24</StyledNode>} />
               <TreeNode label={<StyledNode>翻新住家：0</StyledNode>} />
             </TreeNode>
-            <TreeNode label={<StyledNode>未翻新數量：4</StyledNode>}>
+            <TreeNode label={<StyledNode>未翻新數量：0</StyledNode>}>
             </TreeNode>
           </Tree>,
           <div style={{display: 'flex'}}>
             <ReactApexCharts
               style={{flex: '50%', marign: '5px', maxWidth: '50%', marginRight: 10}}
               options={isRenewChartOptions}
-              series={[15, 4]} type="pie" width={450}
+              series={[24, 0]} type="pie" width={450}
             />
             <ReactApexCharts
               style={{flex: '50%', marign: '5px', maxWidth: '50%'}}
               options={renewReasonChartOptions}
-              series={[15, 0]} type="pie" width={450}
+              series={[24, 0]} type="pie" width={450}
             />
           </div>,
-                    <h4 style={{marginTop: '80px'}}>（一）大同路北區</h4>,
+          "根據資料顯示，可以發現中央路西區有著100%的翻新率，雖然翻新程度不一，有的是完全重建，有的是翻新但仍保留建築最原始的外觀，但基本上沒有沒經歷過翻新的房屋，而翻新的也全都是拿來做開店用途的。推測可能是因為中央路西區連接了城隍廟與東門市場，而且又是小巷，有著大量的觀光客與本地遊客。為了吸引他們進入店內，所以紛紛翻新自己的外觀，才會有如此高的翻新率。",
+
+          <h4 style={{marginTop: '80px'}}>（四）中央路東區</h4>,
           <Image
             className="has-shadow"
-            src="https://i.imgur.com/4NkHcnF.png"
+            src="https://i.imgur.com/zkSmPKz.png"
             info="QGIS製圖，紫色為翻新，紅色為未翻新" />,
           <Tree
             lineWidth={'2px'}
             lineColor={'green'}
             lineBorderRadius={'10px'}
-            label={<StyledNode>總取樣數：19</StyledNode>}
+            label={<StyledNode>總取樣數：11</StyledNode>}
           >
-            <TreeNode label={<StyledNode>翻新數量：15</StyledNode>}>
-              <TreeNode label={<StyledNode>翻新開店：15</StyledNode>} />
-              <TreeNode label={<StyledNode>翻新住家：0</StyledNode>} />
+            <TreeNode label={<StyledNode>翻新數量：10</StyledNode>}>
+              <TreeNode label={<StyledNode>翻新開店：7</StyledNode>} />
+              <TreeNode label={<StyledNode>翻新住家：3</StyledNode>} />
             </TreeNode>
-            <TreeNode label={<StyledNode>未翻新數量：4</StyledNode>}>
+            <TreeNode label={<StyledNode>未翻新數量：1</StyledNode>}>
             </TreeNode>
           </Tree>,
           <div style={{display: 'flex'}}>
             <ReactApexCharts
               style={{flex: '50%', marign: '5px', maxWidth: '50%', marginRight: 10}}
               options={isRenewChartOptions}
-              series={[15, 4]} type="pie" width={450}
+              series={[10, 1]} type="pie" width={450}
             />
             <ReactApexCharts
               style={{flex: '50%', marign: '5px', maxWidth: '50%'}}
               options={renewReasonChartOptions}
-              series={[15, 0]} type="pie" width={450}
+              series={[7, 3]} type="pie" width={450}
             />
           </div>,
+          "與中央路西區相似，中央路東區也有著相對高的翻新率，箇中原因除了樣本數較少外，也有可能因為它是連接了市政府到東門市場、城隍廟的路。值得一提的是，它也是本次調查之中唯一有因為住家翻新的例子，在十間翻新之中，有三間是因為住而翻新的。",
 
-
-
-          <h4 style={{marginTop: '80px'}}>右下</h4>,
-          <table>
-            <tr>
-              <td colSpan='3'>建築樣本總數：34</td>
-            </tr>
-            <tr>
-              <td>翻新建築：20</td>
-              <td>未翻新建築：12</td>
-              <td>無法判斷：2</td>
-            </tr>
-            <tr>
-              <td>為開店翻新：20</td>
-              <td>為居住翻新：0</td>
-              <td>無法判斷：2</td>
-            </tr>
-          </table>,
+          <h4 style={{marginTop: '80px'}}>（五）全區</h4>,
+          <Image
+            className="has-shadow"
+            src="https://i.imgur.com/HlRUI4d.png"
+            info="QGIS製圖，紫色為翻新，紅色為未翻新" />,
+          <Tree
+            lineWidth={'2px'}
+            lineColor={'green'}
+            lineBorderRadius={'10px'}
+            label={<StyledNode>總取樣數：86</StyledNode>}
+          >
+            <TreeNode label={<StyledNode>翻新數量：69</StyledNode>}>
+              <TreeNode label={<StyledNode>翻新開店：66</StyledNode>} />
+              <TreeNode label={<StyledNode>翻新住家：3</StyledNode>} />
+            </TreeNode>
+            <TreeNode label={<StyledNode>未翻新數量：17</StyledNode>}>
+            </TreeNode>
+          </Tree>,
           <div style={{display: 'flex'}}>
-          <Image
-            style={{flex: '50%', padding: '5px', maxWidth: '50%'}}
-            className="has-shadow"
-            src="https://i.imgur.com/DCO9ouZ.png"/>
-          <Image
-            style={{flex: '50%', padding: '5px', maxWidth: '50%'}}
-            className="has-shadow"
-            src="https://i.imgur.com/HICjNXb.png"/>
+            <ReactApexCharts
+              style={{flex: '50%', marign: '5px', maxWidth: '50%', marginRight: 10}}
+              options={isRenewChartOptions}
+              series={[69, 17]} type="pie" width={450}
+            />
+            <ReactApexCharts
+              style={{flex: '50%', marign: '5px', maxWidth: '50%'}}
+              options={renewReasonChartOptions}
+              series={[66, 3]} type="pie" width={450}
+            />
           </div>,
-                    
-
-          <h4 style={{marginTop: '80px'}}>左下</h4>,
-          <table>
-            <tr>
-              <td colSpan='2'>建築樣本總數：31</td>
-            </tr>
-            <tr>
-              <td >翻新建築：31</td>
-              <td>未翻新建築：0</td>
-            </tr>
-            <tr>
-              <td>翻新住家：3</td>
-            </tr>
-            <tr>
-              <td>為開店翻新：31</td>
-              <td>為居住翻新：0</td>
-            </tr>
-          </table>,
-          <div style={{display: 'flex'}}>
-          <Image
-            style={{flex: '50%', padding: '5px', maxWidth: '50%'}}
-            className="has-shadow"
-            src="https://i.imgur.com/lGy3FAw.png"/>
-          <Image
-            style={{flex: '50%', padding: '5px', maxWidth: '50%'}}
-            className="has-shadow"
-            src="https://i.imgur.com/WrgUEw8.png"/>
-          </div>,
-
-          <h4 style={{marginTop: '80px'}}>左上</h4>,
-          <table>
-            <tr>
-              <td colSpan='2'>建築樣本總數：19</td>
-            </tr>
-            <tr>
-              <td>翻新建築：15</td>
-              <td>未翻新建築：4</td>
-            </tr>
-            <tr>
-              <td>為開店翻新：15</td>
-              <td>為居住翻新：0</td>
-            </tr>
-          </table>,
-          <div style={{display: 'flex'}}>
-          <Image
-            style={{flex: '50%', padding: '5px', maxWidth: '50%'}}
-            className="has-shadow"
-            src="https://i.imgur.com/ZlOCfVy.png"/>
-          <Image
-            style={{flex: '50%', padding: '5px', maxWidth: '50%'}}
-            className="has-shadow"
-            src="https://i.imgur.com/VtrkWFU.png"/>
-          </div>,
-
-
-          <h4 style={{marginTop: '80px'}}>整體</h4>,
-          <table>
-            <tr>
-              <td colSpan='3'>建築樣本總數：94</td>
-            </tr>
-            <tr>
-              <td>翻新建築：75</td>
-              <td>未翻新建築：17</td>
-              <td>無法判斷：2</td>
-            </tr>
-            <tr>
-              <td>為開店翻新：72</td>
-              <td>為居住翻新：14</td>
-              <td>無法判斷：2</td>
-            </tr>
-          </table>,
-          <div style={{display: 'flex'}}>
-          <Image
-            style={{flex: '50%', padding: '5px', maxWidth: '50%'}}
-            className="has-shadow"
-            src="https://i.imgur.com/6GkJG0a.png"/>
-          <Image
-            style={{flex: '50%', padding: '5px', maxWidth: '50%'}}
-            className="has-shadow"
-            src="https://i.imgur.com/4NSTV5p.png"/>
-          </div>,
+          "此次調查之中，總計調查了八十八間，有著近八成的翻新率，這個翻新率是比在調查之前我們的想像都來的高的。而細看分布的話，可以發現未翻新的都集中在中心到中心點南方的地方，整體翻新程度比較顯然是大同路以南最低。",
 
         ]} />
-      <Passage title="五、結論" paragraphs={
-        ["由於我們的資料來源主要來自於課堂上同學的資料收集，再輔以Google的街景，畢竟疫情影響我們不太能實際到場進行考察。但由於同學們調查的店家大多都是挑選自己有興趣的，而大部分都是屬於外觀相對有點年代特色，但都已經經過新重新開店營業的店家，且Google街景服務有時候畫面又不太夠，只能單憑幾個角度有時候照不到內部真的很難判定，所以其實我們的資料來源本身就不夠全面。再者，畢竟年代也已經相當久遠，或多或少還要繼續使用的房子不太可能不進行翻新，否則無法繼續使用，但翻新程度及翻新的年代每間就很不一樣，有些可能很久以前翻新過所以過了很久看起來也很舊，有些可能只翻新部分層樓，有些卻連地板之類的也打掉重練，我們對於翻新本身的定義有點過於攏統，但由於疫情及時間因素我們只能依照現有的資料及方法完成我們的數據，所以單純從我們分析出來的數據去解讀會和實際情況有些許差異。",
+      <Passage title="五、結語與反思" paragraphs={
+        ["由於受到疫情影響，我們的資料來源只能依靠課堂上同學的資料蒐集，再輔以 Google 街景去進行分析。而大家紀錄時都是挑選自己有興趣、特殊的房屋，這之中絕大部分都是外觀相對有點年代特色，但都已經經過新重新開店營業的店家，Google 街景服務有時候畫面又不太夠，只能單憑幾個角度有時候照不到內部真的很難判定。再者，畢竟年代也已經相當久遠，或多或少還要繼續使用的房子不太可能不進行翻新，否則無法繼續使用，但翻新程度及翻新的年代每間就很不一樣，有些可能很久以前翻新過所以過了很久看起來也很舊，有些可能只翻新部分層樓，有些卻連地板之類的也打掉重練，我們對於翻新本身的定義有點過於籠統。但由於疫情及時間因素我們只能依照現有的資料及方法完成我們的數據，所以單純從我們分析出來的數據去解讀會和實際情況有些許差異。",
+         "綜觀整體，我們算是最初步的完成了我們的目標「新竹老城區的翻新率調查」。透過調查，我們更深刻的瞭解了這兩條街的歷史脈絡，不僅僅是看到數據面呈現出來的「翻新率」，我們看到更多的是新竹這個城市的故事。每間店面、住家，在它的裝潢與建築上總默默訴說著關於它的故事。當然，肯定還有更多更多的是我們所沒能看到的故事正等待著大家去探索、記憶。 "
         ]} />
     </>
   );
