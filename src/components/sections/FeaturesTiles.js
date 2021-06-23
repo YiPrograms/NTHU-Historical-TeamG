@@ -43,11 +43,11 @@ const FeaturesTiles = ({
   );
 
   const members = [
-    {name: "郭品毅", img: 'https://i.imgur.com/27XRmux.png', department: "資工 24級", desc: "負責製作網站 :)"},
-    {name: "郭品毅", img: 'https://i.imgur.com/27XRmux.png', department: "資工 24級", desc: "負責製作網站 :)"},
-    {name: "郭品毅", img: 'https://i.imgur.com/27XRmux.png', department: "資工 24級", desc: "負責製作網站 :)"},
-    {name: "郭品毅", img: 'https://i.imgur.com/27XRmux.png', department: "資工 24級", desc: "負責製作網站 :)"},
-    {name: "郭品毅", img: 'https://i.imgur.com/27XRmux.png', department: "資工 24級", desc: "負責製作網站 :)"},
+    {name: "李昀庭", img: 'https://i.imgur.com/aBdaLAK.png', department: "數學 22級", desc: "來自 新北中和"},
+    {name: "趙御宏", img: 'https://i.imgur.com/j83IuOk.png', department: "動機 23級", desc: "來自 高雄三民"},
+    {name: "陳柏伸", img: 'https://i.imgur.com/CR9WMgN.png', department: "動機 23級", desc: "來自 高雄前鎮"},
+    {name: "黃鈺婷", img: 'https://i.imgur.com/clioIsW.png', department: "神秘科系", desc: "來自神秘的地方"},
+    {name: "郭品毅", img: 'https://i.imgur.com/SN8w27L.png', department: "資工 24級", desc: "來自 新北新店"},
   ]
 
   return (
@@ -66,7 +66,7 @@ const FeaturesTiles = ({
                   <div className="features-tiles-item-header">
                     <div className="features-tiles-item-image mb-16">
                       <img
-                        style={{borderRadius: '50%'}}
+                        style={{borderRadius: '50%', background: "rgb(144, 190, 222)"}}
                         src={m.img} />
                     </div>
                   </div>
