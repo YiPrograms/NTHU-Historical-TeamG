@@ -14,7 +14,7 @@ import Ice from './views/Ice';
 import Team from './views/Team';
 
 // Initialize Google Analytics
-ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+ReactGA.initialize("G-RLWSPH2XFJ");
 
 const trackPage = page => {
   ReactGA.set({ page });

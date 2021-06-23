@@ -14,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       "CI": false
-      "REACT_APP_GA_CODE": "G-RLWSPH2XFJ"
     
     steps:
     - name: Checkout code
