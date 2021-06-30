@@ -13,11 +13,13 @@ import "react-image-gallery/styles/scss/image-gallery.scss";
 
 import "react-image-gallery/styles/css/image-gallery.css";
 
+import ScrollButton from './components/elements/ScrollButton';
 
 const history = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={history}>
+    <ScrollButton />
     <App />
   </Router>,
   document.getElementById('root')

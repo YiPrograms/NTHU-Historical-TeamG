@@ -57,7 +57,7 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: '主題',
+    title: '',
     paragraph: ''
   };
 
@@ -106,7 +106,7 @@ const FeaturesSplit = ({
                   <Link to="/ice">消暑救星－冰店的歷史</Link>
                   </h3>
                 <p className="m-0">
-                  訪談了新竹有名的「814大同冰店」
+                  新竹名店「814大同冰店」
                   </p>
               </div>
               <div className={

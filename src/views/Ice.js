@@ -8,6 +8,7 @@ import ImageHero from '../components/sections/ImageHero'
 
 import Fade from 'react-reveal/Fade';
 
+import { Link } from 'react-router-dom';
 
 import tatung_img from '../assets/images/tatung.png';
 import ice_map from '../assets/images/ice_map.png';
@@ -53,17 +54,17 @@ const Home = () => {
         centerComponent={<Fade left><h1>消暑救星－冰店的歷史</h1></Fade>}
       />
       <Passage title="一、「二之日鑿冰沖沖，三之日納於凌陰。」" color={["rgb(246, 216, 218)", "black"]} paragraphs={
-        ["每到炎夏，最消暑的食物莫過於冰棒、刨冰、冰淇淋等冰製品了。就算不諳寒性食物的人，至少也會喝杯加了冰塊的冷飲。吃冰是夏天的消暑良方，即使在中國古代也亦然。",
-          "在中國古人使用冰塊消暑的歷史相當早，在先秦詩經 《七月》中有云：「二之日鑿冰沖沖，三之日納於凌陰。」此時就已經提到了冰塊的使用。古人將冬天結的冰藏納於冰窖中，待夏日炎熱使用，因此又稱「藏冰」。而朝廷甚至有專門管理藏冰事的官吏，叫「凌人」。冰品管理乃是宮中要事，甚至是一種貴重品。明清時，皇帝還會依照品級賜冰給首都的公務員，從入伏日一直持續到立秋，首都北平的各衙署官員們，依照品級持有冰票，到相關部門領取皇帝頒賜的冰塊。",        
-          "然而，食用冰塊消暑也不完全是官員貴族的特權。",
-          "在唐朝就開始出現「冰商」，民間也會以白糖與香料製作刨冰販賣。所用的冰塊都是前一年冬天冰窖收藏的，在夏季取出，用刨子刀具刨削出冰屑，再拌以白糖和香料供人食用。這就是所謂的刀削冰，也就是我們現在常吃的「剉冰」之前身。",
+        ["每到夏天，最讓人期待的食物，就是冰棒、刨冰、冰淇淋等冰製品了，就算是正在努力控制身材的人，至少也會喝杯冰飲，消暑一下。",
+          "回溯中國歷史，對於冰塊的使用相當早，在《詩經‧七月》中曾記載：「二之日鑿冰沖沖，三之日納於凌陰。」就提及了先秦時期將冬天結的冰鑿下、藏納於冰窖中的使用情況。",        
+          "然而，在沒有冰箱的時代，冰塊、冰品的儲存極為不易，對宮廷來說，就衍伸出了專門管理冰事的官吏，另外在明清時期，更有皇帝依照品級賜冰的紀錄。",
+          "而在民間，「吃冰」的習慣可以追溯到唐代，當時有「冰商」，以刨刀刨出冰屑，加上以白糖與香料，販賣給大眾食用，可說是我們現在所吃的「剉冰」之前身。",
           <Image className="has-shadow"
             src="https://i.imgur.com/fLX0OAp.png"
             style={{margin: "auto"}}
             info="圖〈吃枝仔冰〉，取自國家文化資料庫。http://newnrch.digital.ntu.edu.tw/nrch/query.php?keyword=%E5%86%B0%E6%A3%92，擷取日期：2021年6月21日"/>
         ]} />
       <Passage title="二、尋覓新竹城裡的冰店足跡" color={["rgb(216, 217, 247)", "black"]} paragraphs={
-        ["一講到新竹市，我們第一個想到的可能不是冰品產業，但如果我們實際去 打開網路地圖，我們還是會發現新竹各式各樣的冰品，從比較傳統的芋圓冰、 剉冰、米苔目黑糖冰、水果冰，或者 814 大同冰店所賣的枝仔冰，到比較近代 的抹茶雪花冰、綿綿冰，甚至做成冰淇淋霜淇淋。我們幾乎可以看到各個時期 出現過的冰品，而且每一家店都有自己的特色，從冰品項目，店內裝潢，經營 方式(外帶貨內用)，每一家店都有各自的愛好者，並吸引不同需求的客群。",
+        ["一講到新竹市，我們第一個想到的可能不是冰品產業，但如果我們實際去打開網路地圖，我們還是會發現新竹各式各樣的冰品，從比較傳統的芋圓冰、剉冰、米苔目黑糖冰、水果冰，或者 814 大同冰店所賣的枝仔冰，到比較近代的抹茶雪花冰、綿綿冰，甚至做成冰淇淋霜淇淋。我們幾乎可以看到各個時期 出現過的冰品，而且每一家店都有自己的特色，從冰品項目，店內裝潢，經營 方式(外帶貨內用)，每一家店都有各自的愛好者，並吸引不同需求的客群。",
           <Image
             className="has-shadow"
             src={ice_map}
@@ -133,6 +134,12 @@ const Home = () => {
             info="自攝，日期：2021年5月6日" />,
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.704546207873!2d120.9659185149608!3d24.805568584079783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346835c1a62aab55%3A0x41d8b4faf2fd00bf!2zODE05Yaw5qOS5aSn5ZCM5Yaw5bqX!5e0!3m2!1szh-TW!2stw!4v1624350947970!5m2!1szh-TW!2stw" width="600" height="450" style={{border:0, margin: 'auto', display: 'block'}} allowfullscreen="" loading="lazy"></iframe>
         ]} />
+      <Passage title="參考資料" style={{fontSize: 'small'}} paragraphs={
+        [<>
+          古代夏天空調還沒有發明出來 古人夏天是如何避暑的，<a target="_blank" href="https://www.fqsjw.com/zh-tw/lsjm/wjzm/255552.html">https://www.fqsjw.com/zh-tw/lsjm/wjzm/255552.html</a>，擷取日期：2021年6月24日。<br /><br />
+          【新竹縣市特色冰店懶人包】清涼一夏！新竹人氣特色冰店必吃推薦TOP10，消暑氣聖品這樣呷，<a target="_blank" href="https://alwa1919.pixnet.net/blog/post/118540752">https://alwa1919.pixnet.net/blog/post/118540752</a>，擷取日期：2021年6月24日。<br /><br />
+          臺灣省內菸酒專賣暫行條例，<a target="_blank" href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0330001">https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0330001</a>擷取日期：2021年6月24日。<br /><br />
+        </>]} /> 
     </>
   );
 }
