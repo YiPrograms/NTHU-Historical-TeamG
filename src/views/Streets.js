@@ -189,9 +189,9 @@ const Home = () => {
         ["我們以大同路和中央路交會的點為中心，將大同路與中央路分成了大同路北區、大同路南區、中央路西區、中央路東區等四個區域，並分別討論其中的翻新率、翻新原因。",
           <h4 style={{marginTop: '80px', color: 'black'}}>（一）大同路北區</h4>,
           <Image
+            legend
             className="has-shadow"
-            src="https://i.imgur.com/mwi3RLq.png"
-            info="QGIS製圖，紫色為翻新，紅色為未翻新" />,
+            src="https://i.imgur.com/mwi3RLq.png"/>,
           <Tree
             lineWidth={'2px'}
             lineColor={'green'}
@@ -221,9 +221,9 @@ const Home = () => {
 
           <h4 style={{marginTop: '80px', color: 'black'}}>（二）大同路南區</h4>,
           <Image
+            legend
             className="has-shadow"
-            src="https://i.imgur.com/xpCXHiR.png"
-            info="QGIS製圖，紫色為翻新，紅色為未翻新" />,
+            src="https://i.imgur.com/xpCXHiR.png"/>,
           <Tree
             lineWidth={'2px'}
             lineColor={'green'}
@@ -254,9 +254,9 @@ const Home = () => {
           
           <h4 style={{marginTop: '80px', color: 'black'}}>（三）中央路西區</h4>,
           <Image
+            legend
             className="has-shadow"
-            src="https://i.imgur.com/9LS2y5m.png"
-            info="QGIS製圖，紫色為翻新，紅色為未翻新" />,
+            src="https://i.imgur.com/9LS2y5m.png"/>,
           <Tree
             lineWidth={'2px'}
             lineColor={'green'}
@@ -286,9 +286,9 @@ const Home = () => {
 
           <h4 style={{marginTop: '80px', color: 'black'}}>（四）中央路東區</h4>,
           <Image
+            legend
             className="has-shadow"
-            src="https://i.imgur.com/t3TSxsu.png"
-            info="QGIS製圖，紫色為翻新，紅色為未翻新" />,
+            src="https://i.imgur.com/t3TSxsu.png"/>,
           <Tree
             lineWidth={'2px'}
             lineColor={'green'}
@@ -318,9 +318,9 @@ const Home = () => {
 
           <h4 style={{marginTop: '80px', color: 'black'}}>（五）全區</h4>,
           <Image
+            legend
             className="has-shadow"
-            src="https://i.imgur.com/hPBxadY.png"
-            info="QGIS製圖，紫色為翻新，紅色為未翻新" />,
+            src="https://i.imgur.com/hPBxadY.png"/>,
           <Tree
             lineWidth={'2px'}
             lineColor={'green'}

@@ -29,6 +29,7 @@ const Image = ({
   alt,
   info,
   style,
+  legend,
   ...props
 }) => {
 
@@ -86,6 +87,19 @@ const Image = ({
             <InfoIconWithTooltip text={info} placement="right" />
           </div>:null
           }
+        {legend?
+          <div style={{position: "absolute", left: 8, bottom: 8, width: 'auto', height: 'auto', margin: 'auto', justifyContent: 'center'
+                      , background: 'rgba(200, 200, 200, 0.8)', border: '3px rgb(60, 60, 60) solid', borderRadius: '10px', padding: '5px'}}>
+            <div style={{justifyContent: 'center'}}>
+              <span style={{display: 'inline-block', width: '14px', height: '14px', borderRadius: '50%', background: '#1377bf', marginRight: '3px'}} />
+              <span style={{fontSize: 18}}>已翻新</span>
+            </div>
+            <div style={{justifyContent: 'center'}}>
+              <span style={{display: 'inline-block', width: '14px', height: '14px', borderRadius: '50%', background: '#e81327', marginRight: '3px'}} />
+              <span style={{fontSize: 18}}>未翻新</span>
+            </div>
+          </div>:
+          null}
       </div>
     </div>
   );
