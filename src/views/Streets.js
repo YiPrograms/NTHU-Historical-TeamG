@@ -223,7 +223,7 @@ const Home = () => {
           <Image
             legend
             className="has-shadow"
-            src="https://i.imgur.com/xpCXHiR.png"/>,
+            src="https://i.imgur.com/t3TSxsu.png"/>,
           <Tree
             lineWidth={'2px'}
             lineColor={'green'}
@@ -288,7 +288,7 @@ const Home = () => {
           <Image
             legend
             className="has-shadow"
-            src="https://i.imgur.com/t3TSxsu.png"/>,
+            src="https://i.imgur.com/xpCXHiR.png"/>,
           <Tree
             lineWidth={'2px'}
             lineColor={'green'}
